@@ -1,0 +1,33 @@
+{
+  "name": "hats",
+  "version": "1.0.0",
+  "description": "hats",
+  "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "handlebars": "^4.0.5",
+    "hbs": "^4.0.0"
+  },
+  "devDependencies": {
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.0"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kristy-mj/hats.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kristy-mj/hats/issues"
+  },
+  "homepage": "https://github.com/kristy-mj/hats#readme",
+  "keywords": []
+}
