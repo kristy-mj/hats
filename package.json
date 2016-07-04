@@ -9,7 +9,9 @@
   "dependencies": {
     "express": "^4.14.0",
     "handlebars": "^4.0.5",
-    "hbs": "^4.0.0"
+    "hbs": "^4.0.0",
+    "knex": "^0.11.7",
+    "sqlite3": "^3.1.4"
   },
   "devDependencies": {
     "tap-spec": "^4.1.1",
