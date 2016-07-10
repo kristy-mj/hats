@@ -1,28 +1,28 @@
 <h1>Build Your Hat</h1>
-<p>Choose brim colour</p>
-<select name="brim" class="brim">
-<option value="Black">Black</option>
-<option value="White">White</option>
-<option value="Grey">Grey</option>
-</select>
+<form class="hatbuilder" action="/orderSummary" accept-charset="UTF-8" method="get">
+	<p>Choose brim colour</p>
+	<select name="brim" class="brim">
+	<option value="Black">Black</option>
+	<option value="White">White</option>
+	<option value="Grey">Grey</option>
+	</select>
 
-<p>Choose body style</p>
-<select name="body" class="body">
-<option value="Stripe">Stripe</option>
-<option value="Dash">Dash</option>
-<option value="Plain">Plain</option>
-</select>
+	<p>Choose body style</p>
+	<select name="body" class="body">
+	<option value="Stripe">Stripe</option>
+	<option value="Dash">Dash</option>
+	<option value="Plain">Plain</option>
+	</select>
 
-<p>Choose pompom colour</p>
-<select name="bobble" class="bobble">
-<option value="Pink">Pink</option>
-<option value="Yellow">Yellow</option>
-<option value="Grey">Grey</option>
-<option value="Orange">Orange</option>
-</select>
-
-<div class="buttons">
-<button>Add to cart</button>
-<button>Share</button>
-<button><a href="/orderSummary">Go to checkout</a></button>
-</div>
+	<p>Choose pompom colour</p>
+	<select name="bobble" class="bobble">
+	<option value="Pink">Pink</option>
+	<option value="Yellow">Yellow</option>
+	<option value="Grey">Grey</option>
+	<option value="Orange">Orange</option>
+	</select>
+	
+	<a href="/hatbuilder" class="button">Add To Cart</a>
+	<input class="button" type="submit" value="Go To Checkout"/>
+	
+</form>		

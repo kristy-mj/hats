@@ -1,29 +1,29 @@
-	<h1>Order Information</h1>
-	<h3>Please complete shipping and payment details</h3>
-
-	<form class="orderInfo" action="/orderConfirm" accept-charset="UTF-8" method="post">
-		<ul class="shippingInfo">
-			<li>
-				Name: <br>
-				<input class="name_input" placeholder="Name" type="text" name="name" id="user_name"/>
-			</li>
-			<li>	
-				Address: <br>
-				<input class="address_input" placeholder="Address" type="text" name="address" id="user_address"/>
-			</li>
-			<li>
-				Email: <br>
-				<input class="email_input" placeholder="Email" type="text" name="email" id="user_name"/>
-			</li>
-		</ul>
-		<ul class="paymentInfo">
-			<li>
-				Select payment type: <br>
-				<select>
-				<option value="This">This way</option>
-				<option value="That">That way</option>
-				</select>
-			<li>
+<h1>Order Information</h1>
+<h3>Please complete shipping and payment details</h3>
+<form class="orderInfo" action="/orderConfirm" accept-charset="UTF-8" method="get">
+	<ul class="shippingInfo">
+		<li>
+			Name: <br>
+			<input class="name_input" placeholder="Name" type="text" name="name" id="user_name"/>
+		</li>
+		<li>	
+			Address: <br>
+			<input class="address_input" placeholder="Address" type="text" name="address" id="user_address"/>
+		</li>
+		<li>
+			Email: <br>
+			<input class="email_input" placeholder="Email" type="text" name="email" id="user_name"/>
+		</li>
+	</ul>
+	<ul class="paymentInfo">
+		<li>
+			Select payment type: <br>
+			<select>
+			<option value="This">This way</option>
+			<option value="That">That way</option>
+			</select>
+		<li>
+	</ul>
+	<input class="button" type="submit" value="Place Order"/>
 	</form>		
 
-	<button><a href="/orderConfirm">Place Order</a></button>

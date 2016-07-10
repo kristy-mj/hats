@@ -7,3 +7,65 @@ var knex = require('knex')({
   useNullAsDefault: true
 });
 
+function hatOrder() {
+	console.log(knex.select('*').from('profile'))
+} 
+
+
+function addProduct (orderid, brim, body, bobble) {
+  return knex('profile').insert({
+     orderid: orderid,
+     brim: brim,
+     body: body,
+     bobble: bobble
+  });
+}
+
+
+
+module.exports = {
+	hatOrder: hatOrder,
+}
+
+
+
+
+// function listProfile() {
+//   console.log(knex.select('*').from('profile'))
+// }
+
+// function listWithoutQ(profile) {
+//   profile.forEach(function (pro) {
+
+//   })
+//   return
+// }
+
+// function logError(err) {
+//   console.log('error mate', err)
+// }
+
+// function getAll() {
+//   return knex.select('*').from('profile')
+// }
+
+// function addProfile (name, answer1, answer2, answer3) {
+//   return knex('profile').insert({
+//      name: name,
+//      q1: answer1,
+//      q2: answer2,
+//      q3: answer3
+//   })
+// }
+
+// function findSame(animal){
+//   var array = animal.split(' ')
+//   for(var i=0; i<array.length; i++){
+//     var word = array[i]
+//   }
+//   return (knex.raw('select * from "profile" where "q1" like "%' + word + '%"'))
+// }
+
+// function closeDB() {
+//   knex.destroy()
+// }
