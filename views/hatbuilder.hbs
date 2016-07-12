@@ -1,5 +1,6 @@
 <h1>Build Your Hat</h1>
-<form class="hatbuilder" action="/orderSummary" accept-charset="UTF-8" method="get">
+<form id="addhat" class="hatbuilder" action="/orderSummary" accept-charset="UTF-8" method="post">
+
 	<p>Choose brim colour</p>
 	<select name="brim" class="brim">
 	<option value="Black">Black</option>
@@ -21,8 +22,9 @@
 	<option value="Grey">Grey</option>
 	<option value="Orange">Orange</option>
 	</select>
-	
-	<a href="/hatbuilder" class="button">Add To Cart</a>
-	<input class="button" type="submit" value="Go To Checkout"/>
-	
+
+	<input class="button" type="submit" value="Add To Cart"/>
+
 </form>		
+
+	<a href="/orderSummary" class="button">Checkout</a>

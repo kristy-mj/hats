@@ -7,10 +7,12 @@
     "test": "tests"
   },
   "dependencies": {
+    "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "handlebars": "^4.0.5",
     "hbs": "^4.0.0",
     "knex": "^0.11.7",
+    "path": "^0.12.7",
     "sqlite3": "^3.1.4"
   },
   "devDependencies": {
