@@ -98,7 +98,6 @@ module.exports = {
 //   case 'remove':
 //     removeProduct(id)
 //       .then(getAll)
-//       .then(listHats)
 //       .catch(logError)
 //       .finally(closeDB)
 //     break

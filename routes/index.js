@@ -11,10 +11,6 @@ router.get('/hatbuilder', function (req, res) {
 	res.render('hatbuilder', {title: "The title should be here"})
 })
 
-router.get('/orderInfo', function (req, res) {
-	res.render('orderInfo')
-})
-
 router.get('/orderConfirm', function (req, res) {
 	res.render('orderConfirm')
 })
@@ -31,7 +27,7 @@ router.get('/orderConfirm', function (req, res) {
 
 
 router.get('/orderSummary', function (req, res) {
-	shoppingcart.getAll()
+		shoppingcart.getAll()
 		.then(function (data) {
 			res.render('orderSummary', {data: data})
 		})
@@ -40,7 +36,7 @@ router.get('/orderSummary', function (req, res) {
 		})
 })
 
-router.post('/orderSummary', function(req, res, next) {
+router.post('/orderSummary', function(req, res) {
 	// console.log('shoppingcart', shoppingcart)
 	var id = req.body.id
 	var brim = req.body.brim
@@ -54,5 +50,25 @@ router.post('/orderSummary', function(req, res, next) {
 	})
 })
 
+router.get('/orderInfo', function (req, res) {
+		orderInfo.getAll()
+		.then(function (info) {
+			res.render('orderInfo', {info: info})
+		})
+		.catch(function (err) {
+			console.error(err)
+		})
+})
 
+router.post('/orderConfirm', function (req, res) {
+	var name = req.body.name
+	var address = req.body.address
+	var email = req.body.email
+
+	orderInfo.addUserInfo(name, address, email)
+	.then(res.redirect('/orderConfirm'))
+	.catch(function (err) {
+		console.error(err)
+	})
+})
 module.exports = router;
