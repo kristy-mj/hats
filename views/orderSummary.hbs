@@ -1,12 +1,10 @@
 <h1>Order Summary</h1>
 <h3>Your hat...</h3>
-
+{{#each data}}
 <ul>
-	<li>Hat:{{this.image}}</li>
-	<li>Quantity:{{this.quantity}}</li>
-	<li>Price:{{this.price}}</li>
-	<li>Shipping:{{this.shipping}}</li>
-	<li>Total:{{this.total}}
+	<li>Pompom:{{this.bobble}}</li>
+	<li>Body:{{this.body}}</li>
+	<li>Brim:{{this.brim}}</li>
 </ul>
-
-<a href="/orderInfo" class="button">Place Order</a>
+{{/each}}
+<a href="/orderInfo" class="button">Confirm Order</a>
