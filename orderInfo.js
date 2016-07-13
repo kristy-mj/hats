@@ -73,47 +73,47 @@ module.exports = {
   getAll: getAll
 }
 
-var cmd = process.argv[2]
-var id = process.argv[3]
-var name = process.argv[4]
-var address = process.argv[5]
-var email = process.argv[6]
+// var cmd = process.argv[2]
+// var id = process.argv[3]
+// var name = process.argv[4]
+// var address = process.argv[5]
+// var email = process.argv[6]
 
-switch (cmd) {
-  case 'list':
-    getAll()
-      .then(listInfo)
-      .catch(logError)
-      .finally(closeDB)
-    break
-  case 'add':
-    addOrderId(id)
-      .then(getAll)
-      // .then(listInfo)
-      .catch(logError)
-      .finally(closeDB)
-    break
-  case 'create':
-    createOrder()
-      .then(getAll)
-      // .then(listInfo)
-      .catch(logError)
-      .finally(closeDB)
-    break
-  case 'update':
-    updateOrder(id, name, address, email)
-      .catch(logError)
-      .finally(closeDB)
-    break
-  case 'remove':
-    removeOrder(id)
-      .then(getAll)
-      // .then(listInfo)
-      .catch(logError)
-      .finally(closeDB)
-    break
-  default:
-    console.log('no matched cases')
-    closeDB()
-    break
-}
+// switch (cmd) {
+//   case 'list':
+//     getAll()
+//       .then(listInfo)
+//       .catch(logError)
+//       .finally(closeDB)
+//     break
+//   case 'add':
+//     addOrderId(id)
+//       .then(getAll)
+//       // .then(listInfo)
+//       .catch(logError)
+//       .finally(closeDB)
+//     break
+//   case 'create':
+//     createOrder()
+//       .then(getAll)
+//       // .then(listInfo)
+//       .catch(logError)
+//       .finally(closeDB)
+//     break
+//   case 'update':
+//     updateOrder(id, name, address, email)
+//       .catch(logError)
+//       .finally(closeDB)
+//     break
+//   case 'remove':
+//     removeOrder(id)
+//       .then(getAll)
+//       // .then(listInfo)
+//       .catch(logError)
+//       .finally(closeDB)
+//     break
+//   default:
+//     console.log('no matched cases')
+//     closeDB()
+//     break
+// }

@@ -75,46 +75,46 @@ module.exports = {
   getAll: getAll
 }
 
-var cmd = process.argv[2]
-var id = process.argv[3]
-var brim = process.argv[4]
-var body = process.argv[5]
-var bobble = process.argv[6]
+// var cmd = process.argv[2]
+// var id = process.argv[3]
+// var brim = process.argv[4]
+// var body = process.argv[5]
+// var bobble = process.argv[6]
 
-switch (cmd) {
-  case 'list':
-    getAll()
-      .then(listHats)
-      .catch(logError)
-      .finally(closeDB)
-    break
-  case 'add':
-    addProduct(id, brim, body, bobble)
-      .then(getAll)
-      .then(listHats)
-      .catch(logError)
-      .finally(closeDB)
-    break
-  case 'remove':
-    removeProduct(id)
-      .then(getAll)
-      .catch(logError)
-      .finally(closeDB)
-    break
-  case 'order':
-    createProductOrder(brim, body, bobble)
-    .catch(logError)
-    .finally(closeDB)
-    break 
-  case 'getCart':
-    getOrderProducts(id)
-    .then ((data) => {
-      console.log(data)
-    })
-    .catch(logError)
-    .finally(closeDB)
-  default:
-    console.log('no matched cases')
-    closeDB()
-    break
-}
+// switch (cmd) {
+//   case 'list':
+//     getAll()
+//       .then(listHats)
+//       .catch(logError)
+//       .finally(closeDB)
+//     break
+//   case 'add':
+//     addProduct(id, brim, body, bobble)
+//       .then(getAll)
+//       .then(listHats)
+//       .catch(logError)
+//       .finally(closeDB)
+//     break
+//   case 'remove':
+//     removeProduct(id)
+//       .then(getAll)
+//       .catch(logError)
+//       .finally(closeDB)
+//     break
+//   case 'order':
+//     createProductOrder(brim, body, bobble)
+//     .catch(logError)
+//     .finally(closeDB)
+//     break 
+//   case 'getCart':
+//     getOrderProducts(id)
+//     .then ((data) => {
+//       console.log(data)
+//     })
+//     .catch(logError)
+//     .finally(closeDB)
+//   default:
+//     console.log('no matched cases')
+//     closeDB()
+//     break
+// }
